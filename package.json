@@ -5,6 +5,7 @@
   "main": "./build/index.js",
   "scripts": {
     "postinstall": "typings install",
+    "prebuild": "tslint --project tsconfig.json src/**/*.ts",
     "build": "parcel build src/index.ts --out-dir build",
     "pretest": "parcel build test/index.spec.ts --out-dir build/test",
     "test": "mocha build/test"
@@ -25,6 +26,7 @@
     "mocha": "^5.0.5",
     "parcel-bundler": "^1.6.2",
     "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.8.0",
     "typescript": "^2.7.2",
     "typings": "^2.1.1"
   }
