@@ -1,13 +1,12 @@
-/// <reference path="../typings/index.d.ts" />
-import mocha = require("mocha");
-import chai = require("chai");
-let should: Chai.Should = chai.should();
+import * as chai from 'chai';
+import * as mocha from 'mocha';
+import { HelloWorld } from '../src/index';
 
-import HelloWorld from "../src/index";
+const should: Chai.Should = chai.should();
 
-describe("Hello World", () => {
-  let helloWorld: HelloWorld = new HelloWorld();
-  it("should print hello world and return 0", () => {
-    helloWorld.hello().should.equal("Hello world");
+describe('Hello World', () => {
+  const helloWorld: HelloWorld = new HelloWorld();
+  it('should print hello world and return 0', () => {
+    helloWorld.hello().should.equal('Hello world');
   });
 });
