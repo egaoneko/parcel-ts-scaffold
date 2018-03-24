@@ -8,7 +8,8 @@
     "prebuild": "tslint --project tsconfig.json src/**/*.ts",
     "build": "parcel build src/index.ts --out-dir build",
     "pretest": "parcel build test/index.spec.ts --out-dir build/test",
-    "test": "mocha build/test"
+    "test": "mocha build/test",
+    "clean": "rm -rf build/*"
   },
   "repository": {
     "type": "git",
